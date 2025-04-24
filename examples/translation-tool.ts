@@ -1,4 +1,4 @@
-import { configureAgent, OpenAIAgent, Tool } from '../src';
+import { configureAgent, ForwardAgent, Tool } from '../src';
 
 // Define a translation tool that translates text between languages
 const translationTool: Tool = {
@@ -198,7 +198,7 @@ async function runTranslationExample() {
 
   try {
     // Run the agent with a prompt that should trigger the translation tool
-    const result = await OpenAIAgent.run(
+    const result = await ForwardAgent.run(
       "Can you translate this text to Spanish? 'Hello, my name is John. I am learning about artificial intelligence and language models. It's very interesting!'"
     );
     

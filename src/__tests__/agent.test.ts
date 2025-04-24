@@ -1,4 +1,4 @@
-import { configureAgent, OpenAIAgent } from '../agent';
+import { configureAgent, ForwardAgent } from '../agent';
 import { WritingSuggestion } from '../types';
 
 // Mock OpenAI
@@ -13,7 +13,7 @@ jest.mock('openai', () => {
   }));
 });
 
-describe('OpenAIAgent', () => {
+describe('ForwardAgent', () => {
   beforeEach(() => {
     jest.clearAllMocks();
   });
@@ -23,7 +23,7 @@ describe('OpenAIAgent', () => {
       // Configure without API key
       configureAgent({});
 
-      await expect(OpenAIAgent.getWritingSuggestions('test text'))
+      await expect(ForwardAgent.getWritingSuggestions('test text'))
         .rejects
         .toThrow('Agent is not configured with an API key');
     });
@@ -58,7 +58,7 @@ describe('OpenAIAgent', () => {
       });
 
       // Call the method
-      const result = await OpenAIAgent.getWritingSuggestions('test text');
+      const result = await ForwardAgent.getWritingSuggestions('test text');
 
       // Verify results
       expect(result).toEqual(mockSuggestions);
@@ -94,7 +94,7 @@ describe('OpenAIAgent', () => {
       });
 
       // Call the method
-      const result = await OpenAIAgent.getWritingSuggestions('test text');
+      const result = await ForwardAgent.getWritingSuggestions('test text');
 
       // Should return empty array on parse error
       expect(result).toEqual([]);

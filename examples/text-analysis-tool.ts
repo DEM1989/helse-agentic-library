@@ -1,4 +1,4 @@
-import { configureAgent, OpenAIAgent, Tool } from '../src';
+import { configureAgent, ForwardAgent, Tool } from '../src';
 
 // Define a text analysis tool that provides readability metrics
 const textAnalysisTool: Tool = {
@@ -203,7 +203,7 @@ async function runTextAnalysisExample() {
 
   try {
     // Run the agent with a prompt that should trigger the text analysis tool
-    const result = await OpenAIAgent.run(
+    const result = await ForwardAgent.run(
       `Can you analyze this text for readability and provide word frequency analysis?
       
       ${sampleText}`

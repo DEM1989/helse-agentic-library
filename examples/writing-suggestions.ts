@@ -1,4 +1,4 @@
-import { configureAgent, OpenAIAgent, WritingSuggestion } from '../src';
+import { configureAgent, ForwardAgent, WritingSuggestion } from '../src';
 
 // Example usage of the writing suggestions feature
 async function runWritingSuggestionsExample() {
@@ -27,7 +27,7 @@ async function runWritingSuggestionsExample() {
     console.log("-----------------------------------");
 
     // Get writing suggestions
-    const suggestions = await OpenAIAgent.getWritingSuggestions(sampleText, {
+    const suggestions = await ForwardAgent.getWritingSuggestions(sampleText, {
       types: ['grammar', 'style', 'conciseness'],
       maxSuggestions: 5
     });

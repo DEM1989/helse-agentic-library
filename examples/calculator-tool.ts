@@ -1,4 +1,4 @@
-import { configureAgent, OpenAIAgent, Tool } from '../src';
+import { configureAgent, ForwardAgent, Tool } from '../src';
 
 // Define a simple calculator tool
 const calculatorTool: Tool = {
@@ -67,7 +67,7 @@ async function runCalculatorExample() {
 
   try {
     // Run the agent with a prompt that should trigger the calculator tool
-    const result = await OpenAIAgent.run(
+    const result = await ForwardAgent.run(
       "I need to calculate 125 * 37. Can you help me with that?"
     );
     

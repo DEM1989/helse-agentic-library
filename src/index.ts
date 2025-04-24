@@ -4,7 +4,7 @@
 export { configureAgent } from './agent';
 
 // Export the agent instance
-export { OpenAIAgent } from './agent';
+export { ForwardAgent } from './agent';
 
 // Export core types for users (configuration, tools, callbacks)
 export type {

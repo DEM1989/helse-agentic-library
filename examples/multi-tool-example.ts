@@ -1,4 +1,4 @@
-import { configureAgent, OpenAIAgent } from '../src';
+import { configureAgent, ForwardAgent } from '../src';
 import { calculatorTool } from './calculator-tool';
 import { webSearchTool } from './web-search-tool';
 import { textAnalysisTool } from './text-analysis-tool';
@@ -51,7 +51,7 @@ async function runMultiToolExample() {
       const prompt = examplePrompts[i];
       console.log(`\n📝 EXAMPLE ${i + 1}: "${prompt}"\n`);
       
-      const result = await OpenAIAgent.run(prompt);
+      const result = await ForwardAgent.run(prompt);
       
       console.log(`\nResult: ${result}\n`);
       console.log("------------------------------------------------");

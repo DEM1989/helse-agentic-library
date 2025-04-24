@@ -1,4 +1,4 @@
-import { configureAgent, OpenAIAgent, Tool } from '../src';
+import { configureAgent, ForwardAgent, Tool } from '../src';
 
 // Define a web search tool that simulates searching the web
 const webSearchTool: Tool = {
@@ -98,7 +98,7 @@ async function runWebSearchExample() {
 
   try {
     // Run the agent with a prompt that should trigger the web search tool
-    const result = await OpenAIAgent.run(
+    const result = await ForwardAgent.run(
       "I need to learn about quantum computing. Can you search for some information about it?"
     );
     

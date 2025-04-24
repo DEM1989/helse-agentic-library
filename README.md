@@ -25,20 +25,36 @@ HELSE Forward is a powerful TypeScript framework for building AI-powered applica
 
 ## Installation
 
+HELSE Forward is available as an npm package. You can install it using npm, yarn, or pnpm:
+
 ```bash
-npm install @helse/forward
+npm install @dem1989/forward
 # or
-yarn add @helse/forward
+yarn add @dem1989/forward
 # or
-pnpm add @helse/forward
+pnpm add @dem1989/forward
 ```
 
 > **Note:** You'll need an OpenAI API key to use HELSE Forward. You can get one from the [OpenAI website](https://platform.openai.com/api-keys).
 
+### TypeScript Configuration
+
+HELSE Forward is written in TypeScript and includes type definitions. Make sure your `tsconfig.json` includes:
+
+```json
+{
+  "compilerOptions": {
+    "esModuleInterop": true,
+    "moduleResolution": "node",
+    // ... other options
+  }
+}
+```
+
 ## Quick Start
 
 ```typescript
-import { configureAgent, ForwardAgent } from '@helse/forward';
+import { configureAgent, ForwardAgent } from '@dem1989/forward';
 
 // Configure the agent with your OpenAI API key
 configureAgent({
@@ -101,7 +117,7 @@ HELSE Forward provides comprehensive observability through callbacks at every st
 Use the `configureAgent` function to set up the framework with your preferred configuration:
 
 ```typescript
-import { configureAgent } from '@helse/forward';
+import { configureAgent } from '@dem1989/forward';
 
 configureAgent({
   // Required: Your OpenAI API key
@@ -263,7 +279,7 @@ Check out the [examples directory](./examples) for complete working examples:
 
 ```bash
 # Clone the repository
-git clone https://github.com/helse/forward.git
+git clone https://github.com/dem1989/forward.git
 cd forward
 
 # Install dependencies
@@ -307,10 +323,9 @@ This project is licensed under the MIT License - see the [LICENSE](./LICENSE) fi
 ---
 
 <div align="center">
-  <p>Made with ❤️ by the HELSE team</p>
+  <p>Made with ❤️ by dem1989</p>
   <p>
-    <a href="https://github.com/helse/forward/stargazers">⭐ Star us on GitHub</a> •
-    <a href="https://twitter.com/helse_ai">🐦 Follow us on Twitter</a> •
-    <a href="https://discord.gg/helse">💬 Join our Discord</a>
+    <a href="https://github.com/dem1989/forward/stargazers">⭐ Star us on GitHub</a> •
+    <a href="https://www.npmjs.com/package/@dem1989/forward">📦 View on npm</a>
   </p>
 </div>

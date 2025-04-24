@@ -1,0 +1,14 @@
+{
+  "entryPoints": ["src/index.ts"],
+  "out": "docs",
+  "excludePrivate": false,
+  "excludeProtected": false,
+  "excludeExternals": false,
+  "includeVersion": true,
+  "disableSources": false,
+
+  "theme": "default",
+  "readme": "README.md",
+  "name": "HELSE Forward",
+  "excludeInternal": false
+}

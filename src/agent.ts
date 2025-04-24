@@ -42,9 +42,10 @@ export function configureAgent(config: AgentConfig): void {
 }
 
 /**
- * Main class for interacting with the agent.
+ * Main agent class for interacting with language models and tools.
+ * @internal This class is exported only for documentation purposes.
  */
-class HelseAgent {
+export class AgentImplementation {
     /**
      * Runs the agent with a given input, potentially using tools.
      * @param input - The user's request or prompt.
@@ -313,4 +314,4 @@ Summary:`;
 }
 
 // Export a singleton instance of the agent class
-export const OpenAIAgent = new HelseAgent();
+export const ForwardAgent = new AgentImplementation();
