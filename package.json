@@ -1,0 +1,48 @@
+{
+  "name": "@helse/agentic-writing",
+  "version": "0.1.0",
+  "description": "An agentic library for AI-powered writing assistance with tool usage and observability.",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "prepublishOnly": "npm run build",
+    "examples": "ts-node examples/index.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/helse/agentic-writing.git"
+  },
+  "keywords": [
+    "ai",
+    "agent",
+    "llm",
+    "writing",
+    "openai",
+    "tools"
+  ],
+  "author": "Your Name <your.email@example.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/helse/agentic-writing/issues"
+  },
+  "homepage": "https://github.com/helse/agentic-writing#readme",
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "devDependencies": {
+    "@types/jest": "^29.5.14",
+    "@types/node": "^20.0.0",
+    "jest": "^29.7.0",
+    "ts-jest": "^29.3.2",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.0.0"
+  },
+  "dependencies": {
+    "openai": "^4.0.0"
+  }
+}

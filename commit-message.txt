@@ -1,0 +1,26 @@
+Initial commit: HELSE Forward - AI Agent Framework
+
+This initial commit establishes the HELSE Forward framework, a TypeScript library for building AI-powered applications with agentic capabilities.
+
+Key components:
+- Core agent implementation with OpenAI integration
+- Tool system for extending agent capabilities
+- Comprehensive observability through callbacks
+- Writing assistance features (summarization, suggestions)
+- Type definitions and interfaces
+- Test suite with Jest
+
+Example tools:
+- Calculator for arithmetic operations
+- Web search simulation
+- Text analysis for readability metrics
+- Translation between languages
+- Multi-tool demonstration
+
+Documentation:
+- README with framework overview and usage examples
+- SETUP guide with detailed installation instructions
+- LICENSE (MIT)
+- Project configuration files
+
+This commit provides a solid foundation for the HELSE Forward framework, ready for community contributions and further development.
