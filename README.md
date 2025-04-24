@@ -3,10 +3,10 @@
   <h1>HELSE Forward</h1>
   <p><strong>An advanced TypeScript framework for building agentic AI applications with tool usage and observability</strong></p>
   <p>
-    <a href="https://www.npmjs.com/package/@helse/forward"><img src="https://img.shields.io/npm/v/@helse/forward.svg?style=flat-square" alt="npm version"></a>
-    <a href="https://github.com/helse/forward/actions"><img src="https://img.shields.io/github/workflow/status/helse/forward/CI?style=flat-square" alt="Build Status"></a>
-    <a href="https://github.com/helse/forward/blob/main/LICENSE"><img src="https://img.shields.io/github/license/helse/forward?style=flat-square" alt="License"></a>
-    <a href="https://github.com/helse/forward/stargazers"><img src="https://img.shields.io/github/stars/helse/forward?style=flat-square" alt="GitHub Stars"></a>
+    <a href="https://www.npmjs.com/package/@dem1989/forward"><img src="https://img.shields.io/npm/v/@dem1989/forward.svg?style=flat-square" alt="npm version"></a>
+    <a href="https://github.com/DEM1989/helse-agentic-library/actions"><img src="https://img.shields.io/github/workflow/status/DEM1989/helse-agentic-library/CI?style=flat-square" alt="Build Status"></a>
+    <a href="https://github.com/DEM1989/helse-agentic-library/blob/main/LICENSE"><img src="https://img.shields.io/github/license/DEM1989/helse-agentic-library?style=flat-square" alt="License"></a>
+    <a href="https://github.com/DEM1989/helse-agentic-library/stargazers"><img src="https://img.shields.io/github/stars/DEM1989/helse-agentic-library?style=flat-square" alt="GitHub Stars"></a>
   </p>
 </div>
 
@@ -28,11 +28,11 @@ HELSE Forward is a powerful TypeScript framework for building AI-powered applica
 HELSE Forward is available as an npm package. You can install it using npm, yarn, or pnpm:
 
 ```bash
-npm install @helse/forward
+npm install @dem1989/forward
 # or
-yarn add @helse/forward
+yarn add @dem1989/forward
 # or
-pnpm add @helse/forward
+pnpm add @dem1989/forward
 ```
 
 > **Note:** You'll need an OpenAI API key to use HELSE Forward. You can get one from the [OpenAI website](https://platform.openai.com/api-keys).
@@ -54,7 +54,7 @@ HELSE Forward is written in TypeScript and includes type definitions. Make sure 
 ## Quick Start
 
 ```typescript
-import { configureAgent, ForwardAgent } from '@helse/forward';
+import { configureAgent, ForwardAgent } from '@dem1989/forward';
 
 // Configure the agent with your OpenAI API key
 configureAgent({
@@ -117,7 +117,7 @@ HELSE Forward provides comprehensive observability through callbacks at every st
 Use the `configureAgent` function to set up the framework with your preferred configuration:
 
 ```typescript
-import { configureAgent } from '@helse/forward';
+import { configureAgent } from '@dem1989/forward';
 
 configureAgent({
   // Required: Your OpenAI API key
@@ -279,8 +279,8 @@ Check out the [examples directory](./examples) for complete working examples:
 
 ```bash
 # Clone the repository
-git clone https://github.com/helse/forward.git
-cd forward
+git clone https://github.com/DEM1989/helse-agentic-library.git
+cd helse-agentic-library
 
 # Install dependencies
 npm install
@@ -323,9 +323,9 @@ This project is licensed under the MIT License - see the [LICENSE](./LICENSE) fi
 ---
 
 <div align="center">
-  <p>Made with ❤️ by the HELSE team</p>
+  <p>Made with ❤️</p>
   <p>
-    <a href="https://github.com/helse/forward/stargazers">⭐ Star us on GitHub</a> •
-    <a href="https://www.npmjs.com/package/@helse/forward">📦 View on npm</a>
+    <a href="https://github.com/DEM1989/helse-agentic-library/stargazers">⭐ Star us on GitHub</a> •
+    <a href="https://www.npmjs.com/package/@dem1989/forward">📦 View on npm</a>
   </p>
 </div>

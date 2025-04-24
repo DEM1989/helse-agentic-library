@@ -27,13 +27,13 @@ You can install HELSE Forward using npm, yarn, or pnpm:
 
 ```bash
 # Using npm
-npm install @helse/forward
+npm install @dem1989/forward
 
 # Using yarn
-yarn add @helse/forward
+yarn add @dem1989/forward
 
 # Using pnpm
-pnpm add @helse/forward
+pnpm add @dem1989/forward
 ```
 
 ## Basic Setup
@@ -42,7 +42,7 @@ After installing the package, you need to configure the agent with your OpenAI A
 
 ```typescript
 // Import the necessary components from HELSE Forward
-import { configureAgent, ForwardAgent } from '@helse/forward';
+import { configureAgent, ForwardAgent } from '@dem1989/forward';
 
 // Configure the agent with your OpenAI API key
 configureAgent({
@@ -81,7 +81,7 @@ set OPENAI_API_KEY=your-api-key-here
 Let's create a more comprehensive example with observability callbacks to monitor the agent's behavior:
 
 ```typescript
-import { configureAgent, ForwardAgent } from '@helse/forward';
+import { configureAgent, ForwardAgent } from '@dem1989/forward';
 
 // Configure the agent with callbacks for observability
 configureAgent({
@@ -128,7 +128,7 @@ summarizeText();
 One of the most powerful features of HELSE Forward is the ability to create custom tools that extend the agent's capabilities. Here's how to create and use a custom tool:
 
 ```typescript
-import { configureAgent, ForwardAgent, Tool } from '@helse/forward';
+import { configureAgent, ForwardAgent, Tool } from '@dem1989/forward';
 
 // Define a custom calculator tool
 const calculatorTool: Tool = {
@@ -260,7 +260,7 @@ runAgentWithTools();
 HELSE Forward offers advanced configuration options for more control over the agent's behavior:
 
 ```typescript
-import { configureAgent, ForwardAgent } from '@helse/forward';
+import { configureAgent, ForwardAgent } from '@dem1989/forward';
 
 // Advanced configuration
 configureAgent({
@@ -344,7 +344,7 @@ my-ai-assistant/
 ### config.ts
 
 ```typescript
-import { configureAgent } from '@helse/forward';
+import { configureAgent } from '@dem1989/forward';
 import { calculatorTool } from './tools/calculator';
 import { weatherTool } from './tools/weather';
 import { translatorTool } from './tools/translator';
@@ -369,7 +369,7 @@ export function initializeAgent() {
 ### tools/calculator.ts
 
 ```typescript
-import { Tool } from '@helse/forward';
+import { Tool } from '@dem1989/forward';
 
 export const calculatorTool: Tool = {
   name: 'calculator',
@@ -411,7 +411,7 @@ export const calculatorTool: Tool = {
 ### handlers/summarize.ts
 
 ```typescript
-import { ForwardAgent } from '@helse/forward';
+import { ForwardAgent } from '@dem1989/forward';
 
 export async function summarizeText(text: string, length: 'short' | 'medium' | 'long' = 'medium') {
   try {
@@ -439,7 +439,7 @@ export async function summarizeText(text: string, length: 'short' | 'medium' | '
 
 ```typescript
 import dotenv from 'dotenv';
-import { ForwardAgent } from '@helse/forward';
+import { ForwardAgent } from '@dem1989/forward';
 import { initializeAgent } from './config';
 import { summarizeText } from './handlers/summarize';
 
@@ -510,7 +510,7 @@ main().catch(console.error);
 
 If you encounter issues not covered here, you can:
 
-- Check the [GitHub repository](https://github.com/helse/forward/issues) for existing issues
+- Check the [GitHub repository](https://github.com/DEM1989/helse-agentic-library/issues) for existing issues
 - Join our [Discord community](https://discord.gg/helse) for real-time help
 - Submit a detailed bug report with steps to reproduce the issue
 
@@ -523,4 +523,4 @@ Now that you've set up HELSE Forward, you might want to explore:
 - Building a web interface for your AI assistant
 - Fine-tuning the agent's behavior with custom system prompts
 
-For more examples and advanced usage, check out the [examples directory](https://github.com/helse/forward/tree/main/examples) in the GitHub repository.
+For more examples and advanced usage, check out the [examples directory](https://github.com/DEM1989/helse-agentic-library/tree/main/examples) in the GitHub repository.

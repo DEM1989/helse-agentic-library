@@ -2,8 +2,11 @@ import { configureAgent, ForwardAgent } from '../agent';
 import { WritingSuggestion } from '../types';
 
 // Mock OpenAI
+const mockCreate = jest.fn();
+
+// Define the mock directly within the factory function
 jest.mock('openai', () => {
-  const mockCreate = jest.fn();
+  // This function is called when 'openai' is required
   return jest.fn().mockImplementation(() => ({
     chat: {
       completions: {
@@ -41,9 +44,7 @@ describe('ForwardAgent', () => {
       ];
 
       // Mock OpenAI response
-      const mockOpenAI = require('openai');
-      const mockInstance = mockOpenAI();
-      mockInstance.chat.completions.create.mockResolvedValue({
+      mockCreate.mockResolvedValue({
         choices: [
           {
             message: {
@@ -62,7 +63,7 @@ describe('ForwardAgent', () => {
 
       // Verify results
       expect(result).toEqual(mockSuggestions);
-      expect(mockInstance.chat.completions.create).toHaveBeenCalledWith(expect.objectContaining({
+      expect(mockCreate).toHaveBeenCalledWith(expect.objectContaining({
         messages: expect.arrayContaining([
           expect.objectContaining({ role: 'system' }),
           expect.objectContaining({ role: 'user', content: 'test text' })
@@ -74,9 +75,7 @@ describe('ForwardAgent', () => {
 
     it('should handle parsing errors gracefully', async () => {
       // Mock invalid JSON response
-      const mockOpenAI = require('openai');
-      const mockInstance = mockOpenAI();
-      mockInstance.chat.completions.create.mockResolvedValue({
+      mockCreate.mockResolvedValue({
         choices: [
           {
             message: {
@@ -98,7 +97,7 @@ describe('ForwardAgent', () => {
 
       // Should return empty array on parse error
       expect(result).toEqual([]);
-      expect(mockInstance.chat.completions.create).toHaveBeenCalled();
+      expect(mockCreate).toHaveBeenCalled();
     });
   });
 });

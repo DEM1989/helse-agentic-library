@@ -1,6 +1,8 @@
 # Publishing Guide for HELSE Forward
 
-This document provides instructions for publishing the HELSE Forward package to npm.
+This document provides instructions for publishing the HELSE Forward package (@dem1989/forward) to npm.
+
+**Current published version: 0.1.0**
 
 ## Prerequisites
 
@@ -8,7 +10,7 @@ Before publishing, make sure you have:
 
 1. An npm account (create one at https://www.npmjs.com/signup if you don't have one)
 2. Logged in to npm on your local machine
-3. Proper access rights to publish under the `@helse` scope
+3. Proper access rights to publish under the `@dem1989` scope (automatic for your own user scope)
 
 ## Preparing for Publication
 
@@ -75,10 +77,10 @@ Before publishing, make sure you have:
    After publishing, verify that your package is available on npm:
 
    ```bash
-   npm view @helse/forward
+   npm view @dem1989/forward
    ```
 
-   You can also check the npm website: https://www.npmjs.com/package/@helse/forward
+   You can also check the npm website: https://www.npmjs.com/package/@dem1989/forward
 
 ## Publishing a New Version
 
@@ -102,7 +104,7 @@ npm publish
 If you need to unpublish a version (within 72 hours of publishing):
 
 ```bash
-npm unpublish @helse/forward@x.y.z
+npm unpublish @dem1989/forward@x.y.z
 ```
 
 Replace `x.y.z` with the specific version you want to unpublish.
@@ -114,7 +116,7 @@ Replace `x.y.z` with the specific version you want to unpublish.
 If a version should no longer be used but you don't want to unpublish it:
 
 ```bash
-npm deprecate @helse/forward@x.y.z "This version is deprecated. Please use version x.y.z instead."
+npm deprecate @dem1989/forward@x.y.z "This version is deprecated. Please use version x.y.z instead."
 ```
 
 ## Additional Resources

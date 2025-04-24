@@ -1,9 +1,8 @@
 {
-  "name": "@helse/forward",
+  "name": "@dem1989/forward",
   "version": "0.1.0",
   "description": "HELSE Forward: A TypeScript framework for building agentic AI applications with tool usage and observability",
   "main": "dist/index.js",
-  "module": "dist/index.mjs",
   "types": "dist/index.d.ts",
   "scripts": {
     "build": "tsc",
@@ -19,7 +18,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/helse/forward.git"
+    "url": "git+https://github.com/DEM1989/helse-agentic-library.git"
   },
   "keywords": [
     "ai",
@@ -38,15 +37,13 @@
   "author": "dem1989 <dem1989@example.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/helse/forward/issues"
+    "url": "https://github.com/DEM1989/helse-agentic-library/issues"
   },
-  "homepage": "https://github.com/helse/forward#readme",
+  "homepage": "https://github.com/DEM1989/helse-agentic-library#readme",
   "files": [
     "dist",
     "README.md",
-    "LICENSE",
-    "SETUP.md",
-    "examples"
+    "LICENSE"
   ],
   "devDependencies": {
     "@types/jest": "^29.5.14",
@@ -63,6 +60,12 @@
   },
   "dependencies": {
     "openai": "^4.0.0"
+  },
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "require": "./dist/index.js"
+    }
   },
   "engines": {
     "node": ">=16.0.0"
