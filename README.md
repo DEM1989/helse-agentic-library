@@ -28,11 +28,11 @@ HELSE Forward is a powerful TypeScript framework for building AI-powered applica
 HELSE Forward is available as an npm package. You can install it using npm, yarn, or pnpm:
 
 ```bash
-npm install @dem1989/forward
+npm install @helse/forward
 # or
-yarn add @dem1989/forward
+yarn add @helse/forward
 # or
-pnpm add @dem1989/forward
+pnpm add @helse/forward
 ```
 
 > **Note:** You'll need an OpenAI API key to use HELSE Forward. You can get one from the [OpenAI website](https://platform.openai.com/api-keys).
@@ -54,7 +54,7 @@ HELSE Forward is written in TypeScript and includes type definitions. Make sure 
 ## Quick Start
 
 ```typescript
-import { configureAgent, ForwardAgent } from '@dem1989/forward';
+import { configureAgent, ForwardAgent } from '@helse/forward';
 
 // Configure the agent with your OpenAI API key
 configureAgent({
@@ -117,7 +117,7 @@ HELSE Forward provides comprehensive observability through callbacks at every st
 Use the `configureAgent` function to set up the framework with your preferred configuration:
 
 ```typescript
-import { configureAgent } from '@dem1989/forward';
+import { configureAgent } from '@helse/forward';
 
 configureAgent({
   // Required: Your OpenAI API key
@@ -279,7 +279,7 @@ Check out the [examples directory](./examples) for complete working examples:
 
 ```bash
 # Clone the repository
-git clone https://github.com/dem1989/forward.git
+git clone https://github.com/helse/forward.git
 cd forward
 
 # Install dependencies
@@ -323,9 +323,9 @@ This project is licensed under the MIT License - see the [LICENSE](./LICENSE) fi
 ---
 
 <div align="center">
-  <p>Made with ❤️ by dem1989</p>
+  <p>Made with ❤️ by the HELSE team</p>
   <p>
-    <a href="https://github.com/dem1989/forward/stargazers">⭐ Star us on GitHub</a> •
-    <a href="https://www.npmjs.com/package/@dem1989/forward">📦 View on npm</a>
+    <a href="https://github.com/helse/forward/stargazers">⭐ Star us on GitHub</a> •
+    <a href="https://www.npmjs.com/package/@helse/forward">📦 View on npm</a>
   </p>
 </div>

@@ -1,0 +1,12 @@
+Update package scope from @dem1989 to @helse
+
+This commit updates all references to the npm package scope from @dem1989 to @helse to match the correct npm organization.
+
+Changes:
+- Update package.json to use @helse/forward as the package name
+- Update repository URLs to use helse organization
+- Update all import statements in documentation to use @helse/forward
+- Update all references to GitHub repository URLs
+- Update publishing instructions to reference the correct scope
+
+This ensures the package will be published under the correct npm organization.
